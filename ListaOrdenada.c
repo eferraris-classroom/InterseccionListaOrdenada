@@ -125,6 +125,7 @@ Lista *interseccionOrdenadas(Lista *lista1, Lista *lista2) {
     Nodo *aux2 = lista2->primero;
 
     while(aux1 != NULL && aux2 != NULL){
+
         if(aux1->codigo > aux2->codigo) { // Avanza el segundo
             aux2 = aux2->siguiente;
         } else if(aux1->codigo < aux2->codigo){ // Avanza el primero
@@ -134,6 +135,7 @@ Lista *interseccionOrdenadas(Lista *lista1, Lista *lista2) {
             aux1 = aux1->siguiente;
             aux2 = aux2->siguiente;
         }
+
     }
 
     return nueva;
